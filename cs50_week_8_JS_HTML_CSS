@@ -1,1 +1,124 @@
+<!DOCTYPE html>
 
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <div class="task">
+                    <h3>Here you can see the code written in Python.
+                         Your task is to select the sample(s) which return the same answer as in the example.</h3>
+                    <h3>To select the answer press the correct option.</h3>
+                    <h3><b>GOOD LUCK!</b></h3>
+
+                    <div class="Example">
+                        <pre>
+    Example:<br>
+    def test(array: list):
+        for el in range(len(array)):
+            array[el] **= 2
+
+        new_array = array[0:-1:2]
+        array.reverse()
+
+        result = ""
+        for el in new_array:
+            result += f"{str(el)}! "
+
+        return result
+                        </pre>
+                </div>
+                <div class="Samples">
+                    <p><b>Samples:</b></p>
+                    <button class="restart-btn">Restart</button>
+                    <ol>
+                        <li class="sample_1">
+                            <button id="btn-1" class="activate-hover"> def test(array: list):<br>
+                                &nbsp;&nbsp;return "! ".join([str(el**2) for el in array][-2::-2]) + "!"
+                            </button>
+                        </li>
+                        <li class="sample_2">
+                            <button id="btn-2" class="activate-hover"> def test(array: list):<br>
+                                &nbsp;&nbsp;result = for el in array: el **=2<br>
+                                &nbsp;&nbsp;result[::2].reverse()<br>
+                                &nbsp;&nbsp;return str(result)
+                            </button>
+                        </li>
+                        <li class="sample_3">
+                            <button id="btn-3" class="activate-hover">def test(array: list):<br>
+                                &nbsp;&nbsp;return "! ".join([str(el*2) for el in array][::-1]) + "!"
+                            </button>
+                        </li>
+                    </ol>
+                </div>
+
+            </div>
+
+            <div class="section section-2">
+                <h2>Part 2: Free Response</h2>
+                <!-- TODO: Add free response question here -->
+                <h3>Answer the question:</h3>
+                <h3>Are the HTML and CSS programming languages?</h3>
+                <h4><i>Write the answer in the input label and then press the check button.</i></h4>
+                <input type="text" placeholder="Write your answer here" id="input">
+                <button id="check">Check</button>
+                <p id="result"><b></b></p>
+            </div>
+        </div>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.querySelector("#btn-1").addEventListener("click", function() {Check_answer("correct", "#btn-1")});
+            document.querySelector("#btn-2").addEventListener("click", function() {Check_answer("incorrect", "#btn-2")});
+            document.querySelector("#btn-3").addEventListener("click", function() {Check_answer("incorrect", "#btn-3")});
+            document.querySelector(".restart-btn").addEventListener("click", function() {Restart()});
+
+            function Restart(){
+                location.reload()
+            }
+            function Check_answer(answer, option){
+                let element = document.querySelector(option)
+                if (answer === 'correct') {
+                    element.textContent = 'Correct answer!';
+                    element.setAttribute("style", "background-color: green; text-align: center; font-size: 20px; height: 100px;");
+                    element.classList.add('disable-hover');
+                    element.classList.remove("activate-hover");
+                    element.type = "text";
+
+
+                } else {
+                    element.textContent = 'Incorrect answer!';
+                    element.setAttribute("style", "background-color: red; text-align: center; font-size: 20px; height: 100px;");
+                    element.classList.add('disable-hover');
+                    element.classList.remove("activate-hover");
+                    element.type = "text";
+                }
+            }
+
+            document.querySelector("#check").addEventListener("click", function() {Check_input()});
+
+            function Check_input(){
+                let element = document.querySelector("#input").value;
+                let result = document.querySelector("#result");
+                if (element === "no"){
+                    result.textContent = "You are correct :)";
+                    result.setAttribute("style", "background-color: green; text-align: center; font-size: 40px; height: 100px; line-height: 100px;");
+                } else {
+                    result.textContent = "Unfortunately, this is not correct :(";
+                    result.setAttribute("style", "background-color: red; text-align: center; font-size: 35px; height: 100px; line-height: 100px;");
+                }
+            }
+
+        </script>
+    </body>
+</html>
