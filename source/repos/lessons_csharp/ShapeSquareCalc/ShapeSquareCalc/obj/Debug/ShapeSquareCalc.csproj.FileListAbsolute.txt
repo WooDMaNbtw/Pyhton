@@ -1,0 +1,8 @@
+C:\Users\Professional\source\repos\lessons_csharp\ShapeSquareCalc\ShapeSquareCalc\obj\Debug\ShapeSquareCalc.csproj.AssemblyReference.cache
+C:\Users\Professional\source\repos\lessons_csharp\ShapeSquareCalc\ShapeSquareCalc\obj\Debug\ShapeSquareCalc.csproj.SuggestedBindingRedirects.cache
+C:\Users\Professional\source\repos\lessons_csharp\ShapeSquareCalc\ShapeSquareCalc\obj\Debug\ShapeSquareCalc.csproj.CoreCompileInputs.cache
+C:\Users\Professional\source\repos\lessons_csharp\ShapeSquareCalc\ShapeSquareCalc\bin\Debug\ShapeSquareCalc.exe.config
+C:\Users\Professional\source\repos\lessons_csharp\ShapeSquareCalc\ShapeSquareCalc\bin\Debug\ShapeSquareCalc.exe
+C:\Users\Professional\source\repos\lessons_csharp\ShapeSquareCalc\ShapeSquareCalc\bin\Debug\ShapeSquareCalc.pdb
+C:\Users\Professional\source\repos\lessons_csharp\ShapeSquareCalc\ShapeSquareCalc\obj\Debug\ShapeSquareCalc.exe
+C:\Users\Professional\source\repos\lessons_csharp\ShapeSquareCalc\ShapeSquareCalc\obj\Debug\ShapeSquareCalc.pdb
